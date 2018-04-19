@@ -1,0 +1,23 @@
+.header{
+    height: 60px;
+    background-color: #5f3c7c;
+    position: fixed;
+    width: 100%;
+
+}
+.icon-list>ul{
+    padding-top: 22px;
+    text-align: right;
+}
+.icon{
+    padding-left: 15px;
+    color: white;
+    font-size: 15px;
+}
+.menu-list>ul{
+    padding-top: 20px;
+}
+.menu-icon{
+    color: white;
+    font-size: 20px;
+}

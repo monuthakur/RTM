@@ -1,0 +1,38 @@
+.register-now{
+    background-color: #5f3c7c;
+    height: 100vh;
+    display: table;
+    text-align: center;
+    width: 100%;
+}
+.register-box{  
+    display: table-cell;
+    vertical-align: middle;
+    font-family: 'Lato', sans-serif;
+    width: 100%;
+}
+.register-button{
+        color: white;
+        background:#5f3c7c;
+        border: 1px solid #8c59b6;
+        border-radius: 15px;
+        font-weight: 600;
+        padding: 10px 35px;
+        font-size: 22px;
+        -webkit-box-shadow: 0 9px 0 5px #361750;
+        box-shadow: 0 9px 0 0px #361750;
+        text-transform: uppercase;
+}
+    
+.register-button:hover{
+        background: #a66cd6;
+}
+.register-button:active {
+        background-color:#4d1f72;
+        box-shadow: 0 5px #361750;
+        transform: translateY(4px);
+        align-items: center;
+        justify-content: center;
+} 
+.btn:focus, .btn:active:focus, .btn.active:focus {
+    outline: black;}

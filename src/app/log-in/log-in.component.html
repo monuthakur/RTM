@@ -1,0 +1,75 @@
+<div class="sign-up-container">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="">
+        <div class="signup-main-box">
+          <div class="signup-main-inner-box">
+            <div class="visible-xs"><img src="../assets/images/white.png" alt="" width="300px;"></div>
+              <div class=" col-sm-8 col-sm-offset-2">
+                <div class="round-border">
+                  <div class="col-sm-6 bg-image hidden-xs">
+                    <div class="logo">
+                      <a href="#"><img src="../assets/images/white.png" alt="" width="300px;"></a>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 sign-up-box">
+                    <div class="">
+                    <h4 class="text-center">LOG IN</h4>          
+                    <!-- <form (submit)="Contact()" #logIn="ngForm"> -->
+                    <form class="for_form" (ngSubmit)="submitlogIn(user)" #logInForm="ngForm" method="post" name="logInForm">
+                    <div class="main">
+                      <div class="inner">
+                      <!-- <div class="col-sm-12">
+                        <div class="form-group">
+                          <input type="text" id="userName" placeholder="USER ID" class="form-control" name="userName"  [(ngModel)]="user.userName" #userName="ngModel" required>
+                          <div *ngIf="userName.invalid && userName.touched" class="alert alert-danger"> 
+                              <div *ngIf="userName.errors.required" >User Id is required</div>
+                        </div>
+                      </div>
+                    </div> -->
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                          <input type="text" placeholder="EMAIL ID" class="form-control" name="email" [(ngModel)]="user.email" #email="ngModel"
+                            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required>
+                          <div *ngIf="email.invalid && email.touched" class="alert alert-danger">
+                            <div *ngIf="email.errors.required">Please, enter a valid email address</div>
+                            <div *ngIf="email.errors?.pattern && email.touched">Please, enter a valid email address</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-12">
+                        <div class="form-group">
+                          <input type="text" id="password" placeholder="PASSWORD" class="form-control" name="password" [(ngModel)]="user.password" #password="ngModel" required>
+                          <div *ngIf="password.invalid && password.touched" class="alert alert-danger">
+                              <div *ngIf="password.errors.required" >Password is required</div>
+                      
+                            </div>
+                        </div>
+                      </div>                  
+                      <div class="col-sm-12">
+                        <div class="form-group check-box">
+                          <label class="container">&nbsp;Remember Me
+                            <input type="checkbox">
+                              <span class="checkmark"></span>
+                           <a href="" class="forgot pull-right" routerLink="/forgotPassword">Forgot Password</a>
+                          </label> 
+                        </div>                          
+                      </div>
+                    </div>
+                  </div>
+                      <div class="col-sm-12">
+                        <div class="form-group">
+                          <button type="submit" class="btn submit-button" [disabled]="logInForm.invalid">submit</button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+    </div>
+    </div>
+  </div>
+</div> 

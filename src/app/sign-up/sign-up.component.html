@@ -1,0 +1,110 @@
+<div class="sign-up-container">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="signup-main-box">
+          <div class="signup-main-inner-box">
+            <div class="visible-xs">
+              <img src="../assets/images/white.png" alt="" width="300px;">
+            </div>
+            <div class="col-sm-offset-2 col-sm-8">
+              <div class="round-border">
+                <div class="col-sm-6 bg-image hidden-xs">
+                  <div class="logo">
+                    <img src="../assets/images/white.png" alt="" width="300px;">
+                  </div>
+                </div>
+                <div class="col-sm-6 sign-up-box">
+                  <h4 class="text-center sign-up">Sign Up</h4>
+                  <form class="for_form" (ngSubmit)="submitSignUp(formDate)" #signUpForm="ngForm" method="post" name="signUpForm">
+                    <div class="col-sm-12">
+                      <div class="form-group">
+                        <input type="text" placeholder="FIRSTNAME" class="form-control" name="userName" [(ngModel)]="formData.userName" #userName="ngModel"
+                          pattern="[a-zA-Z ]{2,30}" maxlength="25" required>
+                        <div *ngIf="userName.invalid && userName.touched" class="alert alert-danger">
+                          <div *ngIf="userName.errors.required">User Name can't be null</div>
+                          <!-- <div *ngIf="nam.errors.pattern" >Only alphabate allow</div> -->
+                          <!-- <div *ngIf="nam.errors.minlength">Minimum 6 Cheracter required,</div> -->
+                          <div *ngIf="userName.errors?.maxlength">Maxlength 25 Cheracter required,</div>
+                        </div>
+                      </div>
+
+
+                      <!-- <input type="text" class="form-control" [(ngModel)]="myData.name" name="name" #nam="ngModel" required pattern="[a-zA-Z ]{2,30}"/> -->
+                      <!--  <div *ngIf="nam.invalid && nam.touched" class="alert alert-danger">
+                              <div *ngIf="nam.errors.required" >Name is required</div>
+                              <div *ngIf="nam.errors.pattern" >Only alphabate allow</div>
+                            </div> -->
+
+                    </div>
+                    <div class="col-sm-12">
+                      <div class="form-group">
+                        <input type="text" placeholder="EMAIL ID" class="form-control" name="email" [(ngModel)]="formData.email" #email="ngModel"
+                          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required>
+                        <div *ngIf="email.invalid && email.touched" class="alert alert-danger">
+                          <div *ngIf="email.errors.required">Please, enter a valid email address</div>
+                          <div *ngIf="email.errors?.pattern && email.touched">Please, enter a valid email address</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-12">
+                      <div class="form-group">
+                        <input type="text" placeholder="MOBILE NO" class="form-control" name="phoneNumber" [(ngModel)]="formData.phoneNumber" #phoneNumber="ngModel"
+                          maxlength="10" minlength="10" pattern="[0-9]*" required>
+                        <div *ngIf="phoneNumber.invalid && phoneNumber.touched" class="alert alert-danger">
+                          <div *ngIf="phoneNumber.errors.required"> Mobile number is Required</div>
+                          <div *ngIf="phoneNumber.errors.minlength">Minimum 10 Cheracter required,</div>
+                          <div *ngIf="phoneNumber.errors.pattern">Numeric digits only </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-12">
+                      <div class="form-group">
+                        <input type="text" placeholder="COUNTRY" class="form-control" [(ngModel)]="formData.country" #country="ngModel" name="country">
+                      </div>
+                    </div>
+                    <div class="col-sm-12">
+                      <div class="form-group">
+                        <input type="password" id="password" placeholder="PASSWORD" class="form-control" name="password" [(ngModel)]="formData.password" #password="ngModel"
+                          minlength="8" maxlength="32" pattern="((?=.*\d)(?=.*[a-zA-Z]).*[0-9])" required validateEqual="confirmPassword"
+                          reverse="true">
+                        <div *ngIf="password.errors && password.touched" class="alert alert-danger">
+                          <div *ngIf="password.errors.required">Please, enter your password.</div>
+                          <div *ngIf="password.errors.minlength">Minimum 8 Cheracter required,</div>
+                          <div *ngIf="password.errors.maxlength"> Maximum 32 Cheracter required</div>
+                          <div *ngIf="password.errors.pattern">Example:- @abcDEF12,</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-12">
+                      <div class="form-group">
+                        <input type="password" id="confirmPassword" placeholder="CONFIRM PASSWORD" class="form-control" name="confirmPassword" [(ngModel)]="formData.confirmPassword"
+                          #confirmPassword="ngModel" required appConfirmEqualValidator="password">
+                        <div *ngIf="confirmPassword.errors && confirmPassword.touched" class="alert alert-danger">
+                          <div *ngIf="confirmPassword.errors.required">Password required,</div>
+                          <div *ngIf="confirmPassword.errors.minlength">Minimum 8 Cheracter required,</div>
+                          <div *ngIf="confirmPassword.errors.maxlength">Maximum 32 Cheracter required,</div>
+                          <div *ngIf="confirmPassword.touched && confirmPassword.errors?.notEqual &&
+            !confirmPassword.errors?.required">
+                            Password and Confirm Password does not match
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+                    <div class="col-sm-12">
+                      <div class="form-group">
+                          
+                        <button type="submit" class="btn submit-button">Submit</button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

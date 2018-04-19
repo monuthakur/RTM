@@ -1,0 +1,129 @@
+.sign-up-container{
+    background-color:#5f3c7c;
+    width: 100%;
+    height:100vh;
+    height: 100%;
+}
+.signup-main-box{
+    height: 100vh;
+    display: table;
+    text-align: center;
+    width: 100%;
+    
+}
+.signup-main-inner-box{
+    display: table-cell;
+    vertical-align: middle;
+}
+.round-border{
+    border-radius: 5px;
+    overflow: hidden;
+}
+.bg-image{
+    background-image: url("../../assets/images/crypto.jpg");
+    height: 425px;
+    background-size: 100% 100%;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.sign-up{
+    color: #5f3c7c;
+    font-family: 'Lato', sans-serif;
+    text-transform: uppercase;
+}
+.sign-up-box{
+    
+    background: linear-gradient(to bottom, white, rgba(231, 227, 227, 0.836));
+    margin: 0;
+    padding: 15px;
+}
+
+.logo{
+    vertical-align: middle;
+    /* background-color: rgba(224, 39, 116, 0.671); */
+    background: linear-gradient(to bottom right, rgba(174, 4, 180, 0.74), rgb(153, 2, 65));
+    width: 100%;
+    padding: 0;
+    min-height: 439px;
+    min-width: 150%;
+    color: white;
+    font-family: 'Lato', sans-serif;
+    font-weight: 600;
+}
+.logo>img{
+    margin-top: 165px; 
+   
+}
+/* .input-box{
+    padding-top: 20px;
+}
+.input-container{
+    background-color: springgreen;
+} */
+.input-style{
+    transition: none;
+    padding: 15px 0px;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #435160;
+    outline: none;
+    /* color: rgb(1, 8, 15); */
+    font-size: 13px !important;
+    font-family: 'Lato', sans-serif;
+    text-transform: uppercase;
+
+}
+::-webkit-input-placeholder{
+    font-size: 13px !important;
+    font-family: 'Lato', sans-serif;
+    color: #5f3c7c;
+}
+.submit-button{
+    background-color: #5f3c7c;
+    color: white;
+    padding: 7px 40px;
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    border-radius: 3px;
+    -webkit-box-shadow: 0px 3px 8px blue;
+    box-shadow: 0px 3px 8px blue;
+    text-transform: uppercase;
+    margin-top: 15px;
+}
+.btn:focus, .btn:active:focus, .btn.active:focus {
+    outline: black;
+}
+.sign-up-box input{
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-bottom: 1px solid gray;
+    border-radius: 0;
+    transform: none;
+    transition: none; 
+    padding: 8px 0px;
+    box-shadow: none;
+    color: #5f3c7c;
+    background: transparent;
+    
+}
+.form-group{
+    position: relative;
+}
+.form-group .alert{
+    position: absolute;
+    right: 0;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    font-size: 11px;
+    margin-top: 5px;
+    
+}
+
+
